@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <a href="/edit-assignments.html" id="edit-assignments-link">Edit Assignments</a>
+    </head>
+    <body>
+        <h1>Assignment Grader</h1>
+        
+        <form id="enter-assignment" >
+            <input type="text" placeholder="Enter Assignment Name" name="assignmentName">
+            <button>Submit</button>
+        </form>
+
+        <select id="all-assignments"></select>
+        <span id="changes-made"></span>
+        <div id="assignments"></div>
+        
+
+        <script src="uuid-v4.js"></script>
+        <script src="assignment-logic.js"></script>
+        <script src="grader-functions.js"></script>
+        <script src="grader-app.js"></script>
+    </body>
+</html>
