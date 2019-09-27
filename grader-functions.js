@@ -15,7 +15,7 @@ const renderAssignments = () => {
     if(assignmentList.length === 0){
         h2Title.textContent = "No Assignments have been added!"
     } else {
-        h2Title.textContent = `Assignments in system:`
+        h2Title.textContent = `Selected Assignment From Dropdown:`
     }
 
     document.querySelector("#assignments").innerHTML = ""
