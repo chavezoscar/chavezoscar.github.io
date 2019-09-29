@@ -1,3 +1,4 @@
+"use strict"
 
 
 // Class syntax, like function, but supported by EC6, easier to read, can call also use call() to inherit properties from parent class 
@@ -12,7 +13,7 @@ class WrittenAssignment {
         this.feedback = [],
         this.grade = "",
         this.completed = false,
-        this.id = uuidv4()
+        this.id = 0
     }
     
     // Pushes criteria with name and score to array of criteria                 
@@ -30,6 +31,9 @@ class WrittenAssignment {
     }
     getCriteria(){
         this.criteriaList.forEach((criteria, index) =>{
+            if(this.criteriaList.length === 0 || this.criteriaList === undefined){
+                return console.log("NOTHING HERE")
+            }
             console.log(`Criteria ${index +1}: ${criteria.criterionName}\n\tDate Enterd:${criteria.date}`) // Change to return string value to render in HTML
         }) 
     }

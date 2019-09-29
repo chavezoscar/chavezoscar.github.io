@@ -1,9 +1,15 @@
 
+"use strict"
+const assignmentId = location.hash.substring(1)
 
 // Get assignments
 const assignments = getSavedAssignments()
 
+// DOM Elements
 const feedback = document.querySelector("#feedback-form")
+const assignmentInfo = document.querySelector("#assignment-info")
+
+// Find Assignment
 
 
 feedback.addEventListener("submit", (e) => {
@@ -14,7 +20,6 @@ feedback.addEventListener("submit", (e) => {
     saveAssignment(assignments)
 })
 
-const assignmentInfo = document.querySelector("#assignment-info")
 
 assignments[0].feedback.forEach((feedback) => {
     const assinmentFeedbck = document.createElement("h2")

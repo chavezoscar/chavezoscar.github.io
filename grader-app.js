@@ -1,3 +1,4 @@
+"use strict"
 
 /* DOM Code
     // Purpose: Render a drop down of assignments in array dynmically
@@ -15,8 +16,6 @@ const filter = {
 }
 
 
-// Called to Render Current assignments
-renderAssignments()
 // Called to render options
 renderOption(assignmentList, filter)
 

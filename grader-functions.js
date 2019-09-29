@@ -1,9 +1,12 @@
-
+"use strict"
 
 // Add new assignments and push into array
 const createAndAddNewAssignment = (name) => {
     const  assignmentToAdd =  new WrittenAssignment(name)
+    assignmentToAdd.id = uuidv4()
     assignmentList.push(assignmentToAdd)
+    saveAssignment(assignmentList)
+    location.assign(`/feedback-assignments.html#${assignmentToAdd.id}`)
 }
 
 
@@ -11,15 +14,16 @@ const createAndAddNewAssignment = (name) => {
 const renderAssignments = () => {
 
     const h2Title = document.createElement("h2")
+    const assignmentsBody = document.querySelector("#assignments")
 
     if(assignmentList.length === 0){
         h2Title.textContent = "No Assignments have been added!"
     } else {
-        h2Title.textContent = `Selected Assignment From Dropdown:`
+        h2Title.textContent = `Assignments in system:`
     }
 
-    document.querySelector("#assignments").innerHTML = ""
-    document.querySelector("#assignments").appendChild(h2Title)  
+    //assignmentsBody.innerHTML = ""
+    assignmentsBody.appendChild(h2Title)  
 
     assignmentList.forEach((assignment, index) => {
         const assignmentName = document.createElement("p")
@@ -83,11 +87,13 @@ const saveAssignment = (assignments) => {
 // Retrieve saved assignments in Local Sotrage
 const getSavedAssignments = () => {
     const assignmentsJSON = localStorage.getItem("assignments")
-    if(assignmentsJSON != null){
-        return JSON.parse(assignmentsJSON)
-    } else {
+
+    try {
+        return assignmentsJSON ? JSON.parse(assignmentsJSON) : []        
+    } catch (error) {
         return []
     }
+    
 }
 
 // Render individual assignment based on index in array
@@ -112,12 +118,17 @@ const renderAssignmentBasedOnIndex = (assignmentIndex) => {
     const currentAssignmentCompleted = document.createElement("p")
     const currentAssignmentNameCriteria = document.createElement("p") // .id = "someId" // give it id to be able to target with CSS later
     const currentAssignmentFeedback = document.createElement("p")
+    const currentAssignmentId = document.createElement("a")
 
     currentAssignmentName.textContent = `Assignment Name: ${currentAssignment.assignmentName}`
     currentAssignmentCompleted.textContent = `Completed: ${currentAssignment.completed ? "YES" : "NO"}`
+    currentAssignmentId.textContent = `ID: ${currentAssignment.id}`
+    currentAssignmentId.setAttribute("href", `./feedback-assignments.html#${currentAssignment.id}`)
+    
     
     assignmentElement.appendChild(currentAssignmentName)  
     assignmentElement.appendChild(currentAssignmentCompleted)
+    assignmentElement.appendChild(currentAssignmentId)
     
     if(currentAssignment.criteriaList.length === 0 || currentAssignment.criteriaList === undefined){
         currentAssignmentNameCriteria.textContent = "No Criterion to Display"
@@ -141,7 +152,5 @@ const renderAssignmentBasedOnIndex = (assignmentIndex) => {
             assignmentElement.appendChild(currenAssignmentNameFeedback)
         })
     }
-
-
 
 }
