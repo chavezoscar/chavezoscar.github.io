@@ -1,23 +1,23 @@
 <!DOCTYPE html>
     <html>
         <head>
+            <link rel="stylesheet" href="styles.css">
             <a href="/index.html">Home</a>
         </head>
         <body>
-            <h1>Add Feedback Here (Can only add to first assignment in list since still developing)</h1>
+            <h1>Add and Edit Feedback Here</h1>
             <form id = "feedback-form">
                 <label>Feedback: </label>
                 <input name="feedback" type="text" placeholder="ex. Grammar">
-                <button>Add Feedback</button>
+                <button id="add-feedback">Add Feedback</button>
             </form>
-            <div id="assignment-info">
-
-            </div>
-
+            <span id="assignment-info">
+                <h2 id="current-assignment">Feedback Given and Feedback to Edit:</h2>
+            </span>
 
             <script src="uuid-v4.js"></script>
             <script src="assignment-logic.js"></script>
             <script src="grader-functions.js"></script>
-            <script src="assignment-edit.js"></script>
+            <script src="assignment-feedback.js"></script>
         </body>
     </html>

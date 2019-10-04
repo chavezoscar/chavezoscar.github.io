@@ -48,10 +48,13 @@ const enterAssignment = document.querySelector("#enter-assignment")
         const name = e.target.elements.assignmentName.value
         createAndAddNewAssignment(name)
         saveAssignment(assignmentList)
-        renderOption(assignmentList, filter)
+        //renderOption(assignmentList, filter)
     })
 
 
 
-
-    
+const changeFeedback = (assignment, index, newText) => {
+    assignment.feedback[index] = newText
+    saveAssignment(assginmentList)
+    renderOption(assignmentList, filter)
+}

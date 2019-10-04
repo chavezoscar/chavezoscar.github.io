@@ -72,7 +72,7 @@ const renderAssignments = () => {
         assignmentName.textContent = assignmentList[filter.option].assignmentName
         
         // Renders assignments in system
-        renderAssignments()
+        //renderAssignments()
     
         //return assignmentList[filter.option]
     }
@@ -154,3 +154,48 @@ const renderAssignmentBasedOnIndex = (assignmentIndex) => {
     }
 
 }
+
+// Remove feedback
+const removeFeedback = (assignment, index) => {
+    assignment.feedback.splice(index, 1)
+    
+}
+
+// Render Feedback
+const renderFeedback = (assignnment, feedbackElement) => {
+    assignnment.feedback.forEach((feedback, index) => {
+            const feedbackEl = document.createElement("div")
+            const assignmentFeedback = document.createElement("input")
+            const button = document.createElement("button")
+        
+            button.type = "button"
+            button.textContent = "X"
+            button.id = index
+
+            assignmentFeedback.value = feedback
+            assignmentFeedback.id = index
+
+            button.addEventListener("click", (e) => {
+                e.preventDefault()
+                const index = e.target.id
+                removeFeedback(assignment, index)
+                saveAssignment(assignments)
+                location.reload()
+
+            })
+
+            assignmentFeedback.addEventListener("input", (e) => {
+                console.log(e.target.value)
+                assignment.feedback[assignmentFeedback.id] = e.target.value
+                saveAssignment(assignments)
+            })
+
+            feedbackEl.appendChild(button)
+            feedbackEl.appendChild(assignmentFeedback)
+            feedbackElement.appendChild(feedbackEl)
+
+        })
+
+}
+
+// add window event listner to allow for live saving
