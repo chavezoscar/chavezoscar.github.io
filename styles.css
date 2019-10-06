@@ -1,16 +1,48 @@
 body {
-    background-color: white
+    background-color: #300032;
 }
 
 .wrapper {
-    background-color: whitesmoke;
+    background-color: #300032;
     list-style: none;
-    padding: 0%;
+    padding: 1%;
     border-radius: 3px;
 }
 
+.select-wrapper {
+    background-color: #06000a;
+    list-style: none;
+    padding: 2%;
+    border-radius: 3%;
+    display: flow-root;
+    justify-content: center
+
+}
+
+#assignments {
+    background-color: #6b046e8a;
+    border-radius: 2%;
+    padding: 1%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center
+  }
+
+p {
+    color: whitesmoke;
+    text-align: start
+}
+
+a {
+    color: #c43235
+}
+
 h1, h2 {
-    color: violet;
+    color: #c43235;
+    
+    text-align: center;
 }
 
 input[type=text]:focus {
@@ -29,3 +61,26 @@ background-color:purple;
   display: inline-block;
   font-size: 12px;
 }
+
+input[type=text]:focus {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    background-color: pink;
+    
+}
+
+#add-feedback{
+background-color:purple; 
+  border: red;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }

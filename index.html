@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-        <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="styles.css">
     <ul class="navbar">
-        
             <li><a href="/feedback-assignments.html" id="feedback-assignments-link">Feedback Assignments </a></li>
     </ul>
     <head>
@@ -11,16 +9,18 @@
     <body>
         <h1>Give Feedback</h1>
         <h2>Select and Assignment and click on ID to give feedback</h2>
-        <h2>Add new Assignment Below</h2>
-        
-        <form id="enter-assignment" >
-            <input type="text" placeholder="Enter Assignment Name" name="assignmentName">
-            <button>Submit</button>
-        </form>
-        <h2>Select Assignment to see details</h2>
-        <span id="changes-made"></span>
-        <select id="all-assignments"></select>
-        <div id="assignments"></div>
+        <div class="wrapper">
+            <h2>Add new Assignment Below</h2>
+            <form class="form-row" id="enter-assignment">
+                <input type="text" placeholder="Enter Assignment Name" name="assignmentName">
+                <button>Submit</button>
+            </form>
+        </div>
+        <div class="select-wrapper">
+            <h2>Select Assignment to see details</h2>
+            <select id="all-assignments"></select>
+            <div id="assignments"></div>
+        </div>
         
 
         <script src="uuid-v4.js"></script>
