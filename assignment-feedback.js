@@ -1,7 +1,7 @@
 
 "use strict"
 const assignmentId = location.hash.substring(1)
-location.hash = ""
+
 
 // Get assignments
 const assignments = getSavedAssignments()
@@ -14,19 +14,21 @@ const currentAssignment = document.querySelector("#current-assignment")
 // Find Assignment based on hash 
 const assignment = assignments.find((assignment) => assignment.id === assignmentId)
 
+//location.hash = ""
+
 currentAssignment.textContent = `Edit Feedback to: ${assignment.assignmentName}`
 
 feedback.addEventListener("submit", (e) => {
     //e.preventDefault()
     const feedback = e.target.elements.feedback.value
-    if(feedback === ""){
-        return location.assign("/index.html")
+    if(!feedback){
+        return alert("feedback needed")
     }
     const feedbackText = e.target.elements.feedback.value
     assignment.feedback.push(feedbackText)
     console.log(assignments)
     saveAssignment(assignments)
-    location.reload() // Reloads page becuase my dumbass rendered inneffeciently 
+    //location.reload() // Reloads page becuase my dumbass rendered inneffeciently 
 })
 
 
