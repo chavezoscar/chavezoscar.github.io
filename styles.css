@@ -1,35 +1,29 @@
+input[type=text]:focus {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    background-color: pink;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #c43235;
+  }
+
+
+li a{
+    display: block;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 1%;
+}
+
 body {
     background-color: #300032;
 }
-
-.wrapper {
-    background-color: #300032;
-    list-style: none;
-    padding: 1%;
-    border-radius: 3px;
-}
-
-.select-wrapper {
-    background-color: #06000a;
-    list-style: none;
-    padding: 2%;
-    border-radius: 3%;
-    display: flow-root;
-    justify-content: center
-
-}
-
-#assignments {
-    background-color: #6b046e8a;
-    border-radius: 2%;
-    padding: 1%;
-}
-
-.form-row {
-    display: flex;
-    justify-content: center
-  }
-
 p {
     color: whitesmoke;
     text-align: start
@@ -52,35 +46,67 @@ input[type=text]:focus {
     
 }
 
-#add-feedback{
-background-color:purple; 
-  border: red;
-  color: white;
-  padding: 10px 15px;
-  text-align: center;
-  display: inline-block;
-  font-size: 12px;
+
+label{
+    color: white;
 }
 
-input[type=text]:focus {
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    background-color: pink;
-    
+.remove-button{
+    display:inline-flex;
+    color: white;
+    background-color: #c43235;
+
 }
 
-#add-feedback{
-background-color:purple; 
-  border: red;
-  color: white;
-  padding: 10px 15px;
-  text-align: center;
-  display: inline-block;
-  font-size: 12px;
+.wrapper {
+    background-color: #300032;
+    list-style: none;
+    padding: 1%;
+    border-radius: 3px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.select-wrapper {
+    background-color: #06000a;
+    list-style: none;
+    padding: 2%;
+    border-radius: 3%;
+    justify-content: center
+
+}
+
+#assignments {
+    background-color: #6b046e8a;
+    border-radius: 2%;
+    padding: 1%;
+}
+
+#assignment-info{
+    background-color: white;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center
   }
+
+
+
+#add-feedback{
+background-color:purple; 
+  border: red;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+}
+
+#add-feedback{
+background-color:purple; 
+  border: red;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+}

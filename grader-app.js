@@ -46,6 +46,9 @@ const enterAssignment = document.querySelector("#enter-assignment")
     enterAssignment.addEventListener("submit", (e) => {
         e.preventDefault()
         const name = e.target.elements.assignmentName.value
+        if(!name){
+            return alert("Name Must Be Entered")
+        }
         createAndAddNewAssignment(name)
         saveAssignment(assignmentList)
         //renderOption(assignmentList, filter)

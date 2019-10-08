@@ -171,6 +171,7 @@ const renderFeedback = (assignnment, feedbackElement) => {
             button.type = "button"
             button.textContent = "X"
             button.id = index
+            button.className = "remove-button"
 
             assignmentFeedback.value = feedback
             assignmentFeedback.id = index
@@ -198,4 +199,3 @@ const renderFeedback = (assignnment, feedbackElement) => {
 
 }
 
-// add window event listner to allow for live saving
