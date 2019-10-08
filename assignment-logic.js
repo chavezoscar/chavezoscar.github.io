@@ -119,16 +119,3 @@ class WrittenAssignment {
 
 
 
-// const unit2Essay2 = new WrittenAssignment("Unit 2 Essay")
-
-// unit2Essay2.addCriteria("Structure", 10)
-// unit2Essay2.addCriteria("Grammar", 4)
-
-// unit2Essay2.setCriteriaScore("grammar", 40)
-// unit2Essay2.setCriteriaScore("credit", 100)
-
-// unit2Essay2.addFeedback("Work on structure")
-
-// unit2Essay2.getSummary()
-
-

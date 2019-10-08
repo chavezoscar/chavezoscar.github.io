@@ -1,6 +1,7 @@
 
 "use strict"
 const assignmentId = location.hash.substring(1)
+location.hash = ""
 
 // Get assignments
 const assignments = getSavedAssignments()
@@ -25,7 +26,7 @@ feedback.addEventListener("submit", (e) => {
     assignment.feedback.push(feedbackText)
     console.log(assignments)
     saveAssignment(assignments)
-    location.reload() // Reloads page becuase my dumbass rundered inneffeciently 
+    location.reload() // Reloads page becuase my dumbass rendered inneffeciently 
 })
 
 
