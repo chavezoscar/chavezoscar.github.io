@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="styles.css">
-    <ul class="navbar">
-            <li><a href="/feedback-assignments.html" id="feedback-assignments-link">Feedback Assignments </a></li>
-    </ul>
+    <link rel="stylesheet" href="./css/styles.css"/>
     <head>
     </head>
     <body>
-        <h1>Give Feedback</h1>
-        <h2>Select and Assignment and click on ID to give feedback</h2>
-        <div class="wrapper">
-            <h2>Add new Assignment Below</h2>
-            <form class="form-row" id="enter-assignment">
-                <input type="text" placeholder="Enter Assignment Name" name="assignmentName">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">About Me</a>
+                    <a href="#">Projects</a>
+                    <a href="https://www.google.com" target="_blank">Google</a>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <div>
+                <img src="https://avatars2.githubusercontent.com/u/22297296?s=460&v=4" alt="">
+            </div>
+        </section>
+        <article>
+            <h1>Oscar Chavez</h1>
+            <p>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum rerum quod corrupti at explicabo illum nihil repudiandae, quam commodi quia fugit ipsam illo itaque cupiditate eaque delectus laborum possimus animi!</span>
+                <span>Adipisci consequatur facilis esse distinctio quaerat, labore ipsum consectetur laborum eum reprehenderit, voluptas ea minima saepe quasi vitae vel eius. Eius, et! Ad non odio quasi. Sed rerum possimus accusantium.</span>
+                <span>Voluptatum et veniam laborum animi vero, quas sed necessitatibus voluptas officia tempora, nulla maiores dicta! Aliquid placeat, quidem deleniti in distinctio at dolores, praesentium, facilis blanditiis quisquam dignissimos laborum neque.</span>
+            </p>
+        </article>
+        <section class="form">
+            <form>
+                <input type="email" placeholder="Sign-up For info about me">
                 <button>Submit</button>
             </form>
-        </div>
-        <div class="select-wrapper">
-            <h2>Select Assignment to see details</h2>
-            <select id="all-assignments"></select>
-            <div id="assignments"></div>
-        </div>
-        
-
-        <script src="uuid-v4.js"></script>
-        <script src="assignment-logic.js"></script>
-        <script src="grader-functions.js"></script>
-        <script src="grader-app.js"></script>
+        </section>
     </body>
 </html>

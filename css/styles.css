@@ -1,0 +1,94 @@
+
+body{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px;
+    padding: 4px;
+    background-color: aquamarine;
+}
+nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: fixed;
+    overflow: hidden;
+    width: 100vw;
+    max-height: 40vh;
+    background-color:lightgreen;
+}
+
+
+li{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+li a{
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    padding: 14px;
+}
+
+li a:hover{
+    color: green;
+}
+
+section{
+    overflow: hidden;
+    height: 55vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+div{
+    height: 60vh;
+    display: flex;
+    /* flex-flow: row nowrap; */
+    justify-content: center;
+    align-items: center;
+    position: top;
+}
+
+img{
+    max-width: 50vw;
+    border-radius: 100vw;
+}
+
+article{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 3em;
+}
+
+span{
+    font-size: 1em;
+}
+
+.form{
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 5vh;
+}
+
+button {
+    background-color: blue;
+    border: none;
+    transition-duration: 0.4s;
+    color: white;
+}
+  
+button:hover {
+    background-color: green;
+    color: white;
+  }
