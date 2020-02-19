@@ -1,0 +1,66 @@
+
+body{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px;
+    background-color: aquamarine;
+}
+nav{
+    overflow: hidden;
+    width: 100vw;
+    background-color:lightgreen;
+}
+
+.navbar a:hover{
+    background-color: green;
+    color: white;
+    border-radius: 100em;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+img{
+    padding: 10px;
+    border-radius: 50em;
+    filter: hue-rotate(180deg)
+}
+
+img:hover{
+    filter: none;
+}
+
+h1{
+    font-size: 3em;
+    word-wrap: break-word;
+}
+
+p{
+    background-color: aqua;
+    word-wrap: break-word;
+}
+
+span{
+    font-size: 1em;
+}
+
+.form{
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 5vh;
+}
+
+button {
+    background-color: blue;
+    border: none;
+    transition-duration: 0.4s;
+    color: white;
+}
+  
+button:hover {
+    background-color: green;
+    color: white;
+  }
