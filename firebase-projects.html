@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Oscar's Portfolio</title>
+  <title>Firebase Project</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,6 @@
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="img/favicon.ico" />
-
 </head>
 
 <body id="page-top">
@@ -30,7 +29,7 @@
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Oscar Chavez</span>
       <span class="d-none d-lg-block">
-          <h1><a href="index.html">IMG</a></h1>
+        <h1><a href="index.html">IMG</a></h1>
         <!-- <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt=""> -->
       </span>
     </a>
@@ -46,7 +45,7 @@
           <a class="nav-link js-scroll-trigger" href="resume.html">Resume</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          <a class="nav-link js-scroll-trigger" href="projects.html">Projects</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
@@ -59,28 +58,18 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
       <div class="w-100">
-        <h1 class="mb-0">Oscar's
-          <span class="text-primary">Projects</span>
-        </h1>
-        <p class="lead mb-5">Here is a screenshot and links to various projects I have worked on throughout my WebDev Education.
-                            I have taken courses in Node and learned about creating an <a href="firebase-projects.html">api using Firebase</a>, also I took a class in <a href="machine-learning-projects.html">Machine Learning</a>
-                            Wher I was introduced to Python, some math, and how neural networks, algorithms such k-nearest neighbor. I was able, through heavy guidance, work on projects that taught 
-                            to read documentation, update code for newer apis and apply problem solving skills (such as loading data from an internet source vs locally).
-        </p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/K-nearest-neighbor_Verfahren.png" alt="K-nearest-neighbor_Verfahren" class="img-fluid mx-auto d-block">
-        <div class="social-icons">
-          <a href="#">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </section>
+          <section class="align-items-center" id="projects">
+              <h2>Realtime  Firebase Database - Custom API</h2>
+              <p>Example of database structure from custome API made to post feedback to students</p>
+              <p>The endpoint shows how my data was structured. To explain some context, for our server-side scripting course (NodeJs), as our final project, we had to write an api. My api invovled 
+                feedback system that stores and tracks feedack given to students on writing assignments. The biggest challenge was organizing the data in away that was human-legible, worked in JSON, and allowed for my front-end to easily display the data. I also wanted everything online so I chose Firebase which is very trendy and well known database system.
+              </p>
+            </section>
 
-
-
+          <img src="img/firebase_realtime_feedback_system_api.png" class="img-fluid mx-auto d-block"/>
+        </section>
+    </div>
+    
 
   
 
